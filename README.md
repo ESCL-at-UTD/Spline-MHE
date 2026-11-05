@@ -7,4 +7,7 @@
 ```math
 \begin{aligned}\dot{x}( t) =f( x( t) ,u(t),\theta ),\\ y( t) =g( x( t) ,u(t),\theta ), \end{aligned}
 ```
-where $x(t)\in \mathbb{R}^{n_{x}}$ is the state vector, $y(t)\in \mathbb{R}^{n_{y}}$ is the output vector, and $\theta \in \mathbb{R}^{n_{\theta }}$ is the constant parameter vector. 
+where:
+* $x(t)\in \mathbb{R}^{n_{x}}$ is the $n_{x}$ dimensional state vector,
+* $y(t)\in \mathbb{R}^{n_{y}}$ is the $n_{y}$ dimensional output vector, and
+* $\theta \in \mathbb{R}^{n_{\theta }}$ is the $n_{\theta}$ dimensional output vector
