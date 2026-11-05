@@ -12,7 +12,7 @@ where:
 * $y(t)\in \mathbb{R}^{n_{y}}$ is the $n_{y}$ dimensional output vector, and
 * $\theta \in \mathbb{R}^{n_{\theta }}$ is the $n_{\theta}$ dimensional model parameter vector.
 
-`Spline-MHE` approximates the model output and state trajectories over a moving horizon using **smoothing splines** to perform spline matching with the smoothing spline approximation of observed noisy data. The `Spline-MHE` NLP is formulated in a **multiple-shooting** framework, with a loss function that enforces higher-order output-derivative matching using exact spline derivatives, enabling robust parameter and initial-state estimates while remaining fast and consistently convergent.
+`Spline-MHE` approximates the model output and state trajectories over a moving horizon using **smoothing splines** to perform spline matching with the smoothing spline approximation of observed noisy data. The `Spline-MHE` NLP is formulated in a **multiple-shooting** framework, with a loss function that enforces higher-order output-derivative matching using exact spline derivatives, enabling robust parameter and initial-state estimates while remaining fast, tractable, and consistently convergent for large and highly nonlinear systems.
 
 
 # Installation
