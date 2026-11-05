@@ -4,4 +4,5 @@
 ![](Spline-MHE/docs/Lorenz_animation.gif)
 
 `Spline-MHE` is a **Smoothing Spline Nonlinear Moving Horizon Estimation** framework for fast and consistently convergent parameter identification and initial-state estimation of nonlinear dynamic systems of the form,\
-$$\dot{x}( t) &=f( x( t) ,u(t),\theta )\\ y( t) &=g( x( t) ,u(t),\theta ),$$
+$$`\dot{x}( t) &=f( x( t) ,u(t),\theta ),`$$\
+$$`y( t) &=g( x( t) ,u(t),\theta ),`$$
