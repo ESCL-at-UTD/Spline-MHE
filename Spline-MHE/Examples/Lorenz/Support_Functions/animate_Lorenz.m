@@ -3,7 +3,15 @@ function animate_Lorenz(iteration_data,x_star,y_star,Y_hat,N,dt,nh,ns,n_x,n_y)
 T = N*dt;
 Ns = N/(ns*nh);
 
-figure('Position', [50, 50, 1300, 350],'Color','white');
+figure('Position', [50, 50, 1100, 300],'Color','white');
+% sgtitle(' ') 
+% annotation('textbox', [0.1, 0.95, 0.8, 0.03], ...
+%     'String', 'Parametr identification and initial state estimation of Lorenz system over a single horizon. (actual solve time-658ms)', ...
+%     'EdgeColor', 'none', ...       % Hide the box border
+%     'HorizontalAlignment', 'center', ...
+%     'FontSize', 10, ...
+%     'Color', [0.4, 0.4, 0.4]);
+
 
 for i = 1:nh
 
@@ -24,9 +32,11 @@ for j = 1:size(iterData,2)
     grid on
     
     xlim([0 T]);
-    lt1 = plot(linspace(0,T,N+1),x_star(1,:),"Color","#fc1303",LineWidth=2,LineStyle="--");
-    lt2 = plot(linspace(0,T,N+1),x_star(2,:),"Color","#fca503",LineWidth=2,LineStyle="--");
-    lt3 = plot(linspace(0,T,N+1),x_star(3,:),"Color","#2803fc",LineWidth=2,LineStyle="--");
+    if i ==1
+        lt1 = plot(linspace(0,T,N+1),x_star(1,:),"Color","#fc1303",LineWidth=2,LineStyle="--");
+        lt2 = plot(linspace(0,T,N+1),x_star(2,:),"Color","#fca503",LineWidth=2,LineStyle="--");
+        lt3 = plot(linspace(0,T,N+1),x_star(3,:),"Color","#2803fc",LineWidth=2,LineStyle="--");
+    end
 
     X_iter = [];
     for k = 1:ns
@@ -51,8 +61,10 @@ for j = 1:size(iterData,2)
     grid on
     
     xlim([0 T]);
-    lt4w = plot(linspace(0,T,N+1),Y_hat,"k",LineWidth=3,LineStyle="-");
-    lt4 = plot(linspace(0,T,N+1),y_star,"Color","#419100",LineWidth=1.5,LineStyle="--");
+    if i == 1
+        lt4w = plot(linspace(0,T,N+1),Y_hat,"k",LineWidth=3,LineStyle="-");
+        lt4 = plot(linspace(0,T,N+1),y_star,"Color","#419100",LineWidth=1.5,LineStyle="--");
+    end
 
     Y_iter = [];
     for k = 1:ns
@@ -74,7 +86,9 @@ for j = 1:size(iterData,2)
     hold on
     grid on
     
-    lt_sp = plot3(x_star(1,:),x_star(2,:),x_star(3,:),'k-',LineWidth=2,LineStyle="--");
+    if i == 1
+        lt_sp = plot3(x_star(1,:),x_star(2,:),x_star(3,:),'k-',LineWidth=2,LineStyle="--");
+    end
     l_sp = plot3(X_iter(1,:),X_iter(2,:),X_iter(3,:),'r-',LineWidth=2,LineStyle="-");
 
     view(37.5, 30);

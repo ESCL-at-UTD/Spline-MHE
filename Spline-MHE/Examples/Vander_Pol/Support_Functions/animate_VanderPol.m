@@ -4,15 +4,6 @@ T = N*dt;
 Ns = N/(ns*nh);
 
 figure('Position', [50, 50, 1100, 300],'Color','white');
-%tiledlayout(1,2,TileSpacing="compact");
-sgtitle(' ') 
-annotation('textbox', [0.1, 0.95, 0.8, 0.03], ...
-    'String', 'Parametr identification and initial state estimation of Van der Pol system over 2 horizons. (actual solve time-192ms)', ...
-    'EdgeColor', 'none', ...       % Hide the box border
-    'HorizontalAlignment', 'center', ...
-    'FontSize', 10, ...
-    'Color', [0.4, 0.4, 0.4]);
-
 
 for i = 1:nh
 
