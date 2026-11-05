@@ -1,12 +1,9 @@
-%function animate_SplineMHE(iteration_data,N,dt,T,N,n_iter,n_mhe,X_true,Y_true,Sol,p,o)
 function animate_Lorenz(iteration_data,x_star,y_star,Y_hat,N,dt,nh,ns,n_x,n_y)
 
 T = N*dt;
 Ns = N/(ns*nh);
 
-figure('Position', [50, 50, 1100, 250],'Color','white');
-%tiledlayout(1,2,TileSpacing="compact");
-
+figure('Position', [50, 50, 1300, 350],'Color','white');
 
 for i = 1:nh
 
@@ -54,7 +51,8 @@ for j = 1:size(iterData,2)
     grid on
     
     xlim([0 T]);
-    lt4 = plot(linspace(0,T,N+1),y_star,"Color","#419100",LineWidth=2,LineStyle="--");
+    lt4w = plot(linspace(0,T,N+1),Y_hat,"k",LineWidth=3,LineStyle="-");
+    lt4 = plot(linspace(0,T,N+1),y_star,"Color","#419100",LineWidth=1.5,LineStyle="--");
 
     Y_iter = [];
     for k = 1:ns
@@ -66,7 +64,7 @@ for j = 1:size(iterData,2)
     title("$\mathbf{Output}$",Interpreter="latex")
     xlabel('t(s)',Interpreter="latex")
     ylabel('y',Interpreter="latex")
-    legend([l4],["$\mathbf{Y}$"],Interpreter="latex")
+    legend([lt4w,l4],["$\mathbf{\hat{Y}}$" "$\mathbf{Y}$"],Interpreter="latex",NumColumns=2)
     hold off
     grid on
 
