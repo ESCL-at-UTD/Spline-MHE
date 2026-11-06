@@ -87,14 +87,14 @@ callback_fun  |  62.00ms (  1.38ms)  64.85ms (  1.44ms)        45
    nlp_jac_g  |  88.00ms (  1.91ms)  84.95ms (  1.85ms)        46
        total  | 775.00ms (775.00ms) 774.14ms (774.14ms)         1
 ```
-| |Horizon-1|
-|:--:|:--:|
-|1 x*(0)|[1.9956;7.4283]|
-|2 θ*|[1.5893;0.6845;2.8168;1.4503]|
-|3 Convergence Cost|0.0044|
-|4 Solver Iterations|44|
-|5 NLP Construction Time (s)|0.2998|
-|6 NLP Solve Time (s)|0.7741|
+|| |Horizon-1|
+|:--:|:--:|:--:|
+|1| x*(0)|[1.9956;7.4283]|
+|2| θ*|[1.5893;0.6845;2.8168;1.4503]|
+|3| Convergence Cost|0.0044|
+|4| Solver Iterations|44|
+|5| NLP Construction Time (s)|0.2998|
+|6| NLP Solve Time (s)|0.7741|
 
 
 The following code animates the solver iterations. Note that since this is a unobservable\-unidentifiable (UOI) system, there are infinite solutions that yield the exact same output response. It can be seen in the animation that Spline\-MHE was able to converge on a solution that produces the required output response:
