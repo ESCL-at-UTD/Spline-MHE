@@ -9,7 +9,7 @@ The Van der Pol system considered in this example is defined as,
 
  $$ y(t)=x_1 (t)x_2 (t), $$ 
 
-where the states $x(t)\in {\mathbb{R}}^2$ and the parameters $\theta \in {\mathbb{R}}^1$ . In this example the underlying true system is initialized at initial states $x^{\star } (0)=[1;2.5]$ and parameters $\theta^{\star } =[0.5]$ characterizing the true system as chaotic. The goal of this example is to use Spline\-MHE algorithm to use the true model output $y(t)=x_1 (t)x_2 (t)$ corrupted with Gaussian noise to estimate the model initial states $x^{\ast } (0)$ and identify the model parameters $\theta^{\ast }$ .
+where the states $x(t)\in {\mathbb{R}}^2$ and the parameters $\theta \in {\mathbb{R}}^1$ . In this example the underlying true system is initialized at initial states $x^{\star } (0)=[1;2.5]$ and parameters $\theta^{\star } =[0.5]$. The goal of this example is to use Spline\-MHE algorithm to use the true model output $y(t)=x_1 (t)x_2 (t)$ corrupted with Gaussian noise to estimate the model initial states $x^{\ast } (0)$ and identify the model parameters $\theta^{\ast }$ .
 
 ### Generate Noisy Data
 
