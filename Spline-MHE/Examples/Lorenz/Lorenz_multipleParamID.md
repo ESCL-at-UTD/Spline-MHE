@@ -40,7 +40,7 @@ true_param = {x0_star,theta_star};
 [x_star,y_star,Y_hat] = Lorenz_sim(true_param,N,dt,10,true); % SNR=10
 ```
 
-![figure_0.png](Lorenz_multipleParamID_media/figure_0.png)
+![figure_0.png](Support_Functions/Lorenz_multipleParamID_media/figure_0.png)
 ### Initialize Spline\-MHE
 
 For initializing the Spline\-MHE algorithm, the initial guess of $x(0)$ and $\theta$ , the smoothing spline estimate of noisy data ${{\hat{Y} }}^{est}$ , along with the hyperparameter choices are required. Here the initial $x(0)$ and $\theta$ are arbitrarily chosen by linearly scaling $x^{\star } (0)$ and $\theta^{\star }$ using scaling factors $r_x$ and $r_{\theta }$ . The Spline\-MHE hyperparameter can then be selected based on the heuristics presented in the paper. For demonstration purposes, the hyperparameter choices for number of moving horizons $n_h =1$ , number of multiple shooting spline segments over a horizon $n_s =20$ , spline order $n_p =3$ , number of knots per spline segment $n_{\tau } =8$ , the set of intermediate constraint points $\mathcal{K}$ , and a weighting matrix ${W=I}$ are chosen for this example. The smoothing spline estimate ${{\hat{Y} }}^{est} ={\big(\Phi \Phi_{\lambda ,\delta }^{\dagger} {{\hat{Y} }}^{\top }\big)}^{\top }$ of the noisy data for $\Phi_{\lambda ,\delta }^{\dagger} ={\big(\Phi^{\top } \Phi +\lambda \Phi^{(\delta )\top } \Phi^{(\delta )} \big)}^{-1} \Phi^{\top }$ is obtained by first finding a minimizing value of the smoothness factor $\lambda$ for a chosen spline derivative order $\delta$ using a Generalized Cross\-Validation (GCV) scheme. The following code initializes the Spline\-MHE algorithm:
@@ -70,7 +70,7 @@ delta = 2; % spline derivative order
 [lambda,Y_hat_est] = GCV(Y_hat,delta,np*2,n_tau*10,N,dt,true);
 ```
 
-![figure_1.png](Lorenz_multipleParamID_media/figure_1.png)
+![figure_1.png](Support_Functions/Lorenz_multipleParamID_media/figure_1.png)
 ### Solve Spline\-MHE
 
 The initial guess of $x(0)$ and $\theta$ , the smoothing spline estimate ${{\hat{Y} }}^{est}$ , and the Spline\-MHE hyperparameter choices can now be used to solve the Spline\-MHE NLP to estimate the model initial states $x^{\ast } (0)$ and identify the model parameters $\theta^{\ast }$ . The following code solves the Spline\-MHE NLP:
@@ -105,4 +105,4 @@ The following code animates the solver iterations:
 animate_Lorenz(iteration_data,x_star,y_star,Y_hat,N,dt,nh,ns,n_x,n_y);
 ```
 
-![figure_2.png](Lorenz_multipleParamID_media/figure_2.png)
+![figure_2.png](Support_Functions/Lorenz_multipleParamID_media/figure_2.png)
