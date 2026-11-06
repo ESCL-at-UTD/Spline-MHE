@@ -1,5 +1,5 @@
 # Spline-MHE
-[![](https://img.shields.io/badge/MATLAB-R2024a-blue)](https://www.mathworks.com/campaigns/products/trials.html?prodcode=ML&s_tid=prod_getml)
+[![](https://img.shields.io/badge/MATLAB-R2024a-blue)](https://www.mathworks.com/products/matlab.html)
 ![](https://img.shields.io/badge/DOI-Paperlink-orange)
 ![](Spline-MHE/docs/VanderPol_animation.gif)
 ![](Spline-MHE/docs/Lorenz_animation.gif)
