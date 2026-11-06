@@ -89,14 +89,14 @@ callback_fun  | 115.00ms (  3.59ms) 114.23ms (  3.57ms)        32
    nlp_jac_g  |  87.00ms (  2.64ms)  86.58ms (  2.62ms)        33
        total  | 761.00ms (761.00ms) 761.27ms (761.27ms)         1
 ```
-| |Horizon-1|
-|:--:|:--:|
-|1 x*(0)|[-2.5531;-0.4111;19.0338]|
-|2 θ*|[9.9125;27.4779;2.7031]|
-|3 Convergence Cost|0.0430|
-|4 Solver Iterations|31|
-|5 NLP Construction Time (s)|0.4700|
-|6 NLP Solve Time (s)|0.7613|
+| | |Horizon-1|
+|:--:|:--:|:--:|
+|1| x*(0)|[-2.5531;-0.4111;19.0338]|
+|2| θ*|[9.9125;27.4779;2.7031]|
+|3| Convergence Cost|0.0430|
+|4| Solver Iterations|31|
+|5| NLP Construction Time (s)|0.4700|
+|6| NLP Solve Time (s)|0.7613|
 
 
 The following code animates the solver iterations:
